@@ -2,11 +2,15 @@
   "name": "vue-manager",
   "version": "1.0.0",
   "description": "Vue CLI management",
-  "main": "index.ts",
+  "main": "index.js",
   "repository": "https://github.com/vitorlofonseca/vue-manager",
   "author": "Vitor Fonseca",
   "license": "MIT",
+  "bin": {
+    "vue-manager": "index.js"
+  },
   "dependencies": {
-    "create-file": "^1.0.1"
+    "create-file": "^1.0.1",
+    "node": "^19.1.0"
   }
 }
