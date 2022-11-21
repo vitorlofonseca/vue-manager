@@ -1,0 +1,12 @@
+{
+  "name": "vue-manager",
+  "version": "1.0.0",
+  "description": "Vue CLI management",
+  "main": "index.ts",
+  "repository": "https://github.com/vitorlofonseca/vue-manager",
+  "author": "Vitor Fonseca",
+  "license": "MIT",
+  "dependencies": {
+    "create-file": "^1.0.1"
+  }
+}
