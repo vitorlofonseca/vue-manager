@@ -1,46 +1,18 @@
 #! /usr/bin/env node
 
-const createFile = require("create-file");
-const PARAMETERS_INDEX = 2;
-const PARAMETERS = {
-  COMPONENT_NAME: "componentName",
-};
-const parameters = {};
+const createComponent = require("./commands/createComponent");
+const getCommand = require("./cli-utils/command");
+const POSSIBLE_COMMANDS = require("./constants/possibleCommands");
+const getReceivedParams = require("./cli-utils/parameters");
 
-process.argv.forEach(function (val, index, array) {
-  if (index < PARAMETERS_INDEX) {
-    return;
-  }
+let receivedCommand = getCommand();
 
-  if (!val.includes("=")) {
-    throw new Error("You need to specify what is the parameter " + val);
-  }
+const receivedParams = getReceivedParams();
 
-  const [parameter, value] = val.split("=");
-
-  parameters[parameter] = value;
-});
-
-if (!parameters.hasOwnProperty(PARAMETERS.COMPONENT_NAME)) {
-  throw new Error(
-    `You need to specify the ${PARAMETERS.COMPONENT_NAME} property`
-  );
+switch (receivedCommand) {
+  case POSSIBLE_COMMANDS.CREATE_COMPONENT:
+    createComponent(receivedParams);
+    break;
+  default:
+    throw new Error(`Command ${receivedCommand} is not valid`);
 }
-
-createFile(
-  `./${parameters.componentName}/${parameters.componentName}.vue`,
-  `<template>
-
-</template>
-
-<script lang="ts" setup>
-
-</script>
-
-<style lang="scss" scoped>
-
-</style>`,
-  function (err) {
-    // file either already exists or is now created (including non existing directories)
-  }
-);
