@@ -1,7 +1,7 @@
-const createFile = require("create-file");
-const validateParams = require("../cli-utils/createComponent");
+import createFile from "create-file";
+import { validateParams } from "../cli-utils/createComponent.js";
 
-module.exports = function createComponent(params) {
+export const createComponent = (params) => {
   validateParams(params);
 
   createFile(

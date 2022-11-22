@@ -1,7 +1,7 @@
 const PARAMETERS_INDEX = 3;
 const receivedParameters = {};
 
-module.exports = function getReceivedParams() {
+export const getReceivedParams = () => {
   process.argv.forEach(function (val, index) {
     if (index < PARAMETERS_INDEX) {
       return;

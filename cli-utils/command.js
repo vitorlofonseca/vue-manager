@@ -1,7 +1,7 @@
 const COMMAND_INDEX = 2;
-const POSSIBLE_COMMANDS = require("../constants/possibleCommands");
+import { POSSIBLE_COMMANDS } from "../constants/possibleCommands.js";
 
-module.exports = function getCommand() {
+export const getCommand = () => {
   const receivedCommand = process.argv[COMMAND_INDEX];
 
   if (!receivedCommand) {

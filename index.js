@@ -1,9 +1,9 @@
 #! /usr/bin/env node
 
-const createComponent = require("./commands/createComponent");
-const getCommand = require("./cli-utils/command");
-const POSSIBLE_COMMANDS = require("./constants/possibleCommands");
-const getReceivedParams = require("./cli-utils/parameters");
+import { createComponent } from "./commands/createComponent.js";
+import { getCommand } from "./cli-utils/command.js";
+import { POSSIBLE_COMMANDS } from "./constants/possibleCommands.js";
+import { getReceivedParams } from "./cli-utils/parameters.js";
 
 let receivedCommand = getCommand();
 
