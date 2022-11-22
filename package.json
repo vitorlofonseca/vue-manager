@@ -1,6 +1,6 @@
 {
   "name": "vuema",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "Vue CLI management",
   "main": "index.js",
@@ -11,7 +11,6 @@
     "vuema": "index.js"
   },
   "dependencies": {
-    "create-file": "^1.0.1",
-    "node": "^19.1.0"
+    "create-file": "^1.0.1"
   }
 }
