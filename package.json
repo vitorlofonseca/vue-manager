@@ -1,6 +1,6 @@
 {
   "name": "vuema",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue CLI management",
   "main": "index.js",
   "repository": "https://github.com/vitorlofonseca/vuema",
