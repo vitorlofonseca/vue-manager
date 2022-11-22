@@ -5,7 +5,9 @@ export const createComponent = (params) => {
   validateParams(params);
 
   createFile(
-    `./${params.componentName}/${params.componentName}.vue`,
+    `./${params.componentName || params.n}/${
+      params.componentName || params.n
+    }.vue`,
     `<template>
         
 </template>

@@ -1,5 +1,8 @@
 const COMMAND_INDEX = 2;
-import { POSSIBLE_COMMANDS } from "../constants/possibleCommands.js";
+import {
+  POSSIBLE_COMMANDS,
+  POSSIBLE_ALIASES_COMMANDS,
+} from "../constants/possibleCommands.js";
 
 export const getCommand = () => {
   const receivedCommand = process.argv[COMMAND_INDEX];
@@ -8,7 +11,10 @@ export const getCommand = () => {
     throw new Error(`You must pass a command`);
   }
 
-  if (POSSIBLE_COMMANDS.includes(receivedCommand)) {
+  if (
+    POSSIBLE_COMMANDS.includes(receivedCommand) ||
+    POSSIBLE_ALIASES_COMMANDS.includes(receivedCommand)
+  ) {
     return;
   }
 
