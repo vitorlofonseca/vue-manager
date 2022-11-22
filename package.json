@@ -1,13 +1,13 @@
 {
-  "name": "vue-manager",
+  "name": "vuema",
   "version": "1.0.0",
   "description": "Vue CLI management",
   "main": "index.js",
-  "repository": "https://github.com/vitorlofonseca/vue-manager",
+  "repository": "https://github.com/vitorlofonseca/vuema",
   "author": "Vitor Fonseca",
   "license": "MIT",
   "bin": {
-    "vue-manager": "index.js"
+    "vuema": "index.js"
   },
   "dependencies": {
     "create-file": "^1.0.1",
